@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7027r328babp"]
+
+[ext_resource type="PackedScene" uid="uid://i50ngyfbt5e8" path="res://interface/counter/counter.tscn" id="1_n6b6s"]
+
+[node name="HealthPotionCounter" instance=ExtResource("1_n6b6s")]

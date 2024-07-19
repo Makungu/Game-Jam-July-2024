@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccxxdflgr2u32"]
+
+[ext_resource type="PackedScene" uid="uid://bxtyjfyjbssbw" path="res://interface/bar/bar.tscn" id="1_17i68"]
+
+[node name="HealthBar" instance=ExtResource("1_17i68")]
+clip_contents = true
+custom_minimum_size = Vector2(100, 25)
+offset_right = 396.0
+offset_bottom = 53.0

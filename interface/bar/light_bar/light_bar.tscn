@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://hcl3ca48gq7h"]
+
+[ext_resource type="PackedScene" uid="uid://ccxxdflgr2u32" path="res://interface/bar/health_bar/health_bar.tscn" id="1_4hq1e"]
+[ext_resource type="Texture2D" uid="uid://djfphawndbqrn" path="res://interface/bar/light_bar/bg(1).png" id="2_j3wvv"]
+[ext_resource type="Texture2D" uid="uid://currwf2jasyda" path="res://interface/bar/light_bar/fill(1).png" id="3_arh1p"]
+
+[node name="LightBar" instance=ExtResource("1_4hq1e")]
+offset_right = 248.0
+
+[node name="TextureProgressBar" parent="." index="0"]
+custom_minimum_size = Vector2(100, 25)
+texture_under = ExtResource("2_j3wvv")
+texture_progress = ExtResource("3_arh1p")
