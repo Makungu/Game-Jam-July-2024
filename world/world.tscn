@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd55m0tudpbqn"]
+
+[ext_resource type="PackedScene" uid="uid://d2066vuknun4q" path="res://player/player.tscn" id="1_ym1eb"]
+[ext_resource type="PackedScene" uid="uid://08yjpqmysklr" path="res://interface/interface.tscn" id="2_mkgio"]
+[ext_resource type="PackedScene" uid="uid://oufsqvluubpw" path="res://shared_components/hit_box.tscn" id="3_u6jfl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atbb1"]
+size = Vector2(20, 133)
+
+[node name="World" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_ym1eb")]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+position = Vector2(0, 1)
+remote_path = NodePath("../../Camera2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(221, 1.5)
+shape = SubResource("RectangleShape2D_atbb1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Interface" parent="CanvasLayer" instance=ExtResource("2_mkgio")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="HitBox" parent="." instance=ExtResource("3_u6jfl")]
+position = Vector2(138, -44)
+damage = 100
+
+[connection signal="health_changed" from="Player" to="CanvasLayer/Interface" method="_on_player_health_changed"]
+[connection signal="initialise_health" from="Player" to="CanvasLayer/Interface" method="_on_player_initialise_health"]
+[connection signal="initialise_light" from="Player" to="CanvasLayer/Interface" method="_on_player_initialise_light"]

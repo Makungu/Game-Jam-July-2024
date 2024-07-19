@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://i50ngyfbt5e8"]
+
+[ext_resource type="Theme" uid="uid://ctiaal7s0rqig" path="res://interface/themes/default_theme.tres" id="1_1piqc"]
+[ext_resource type="Texture2D" uid="uid://cn5tq170bo2i2" path="res://interface/counter/label_bg.png" id="1_jdhrx"]
+[ext_resource type="Texture2D" uid="uid://c5ufnqdf4ttvo" path="res://interface/counter/health_potions/clipart1529079.png" id="2_req8r"]
+
+[node name="Counter" type="NinePatchRect"]
+offset_right = 118.0
+offset_bottom = 54.0
+theme = ExtResource("1_1piqc")
+texture = ExtResource("1_jdhrx")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -33.5
+offset_right = -8.0
+offset_bottom = 31.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_req8r")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -39.0
+offset_right = 74.0
+offset_bottom = 39.0
+grow_vertical = 2
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1

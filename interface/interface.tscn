@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://08yjpqmysklr"]
+
+[ext_resource type="Script" path="res://interface/interface.gd" id="1_b7wuk"]
+[ext_resource type="PackedScene" uid="uid://ccxxdflgr2u32" path="res://interface/bar/health_bar/health_bar.tscn" id="1_rluvy"]
+[ext_resource type="PackedScene" uid="uid://hcl3ca48gq7h" path="res://interface/bar/light_bar/light_bar.tscn" id="2_q77sj"]
+[ext_resource type="Script" path="res://interface/bar/health_bar/health_bar.gd" id="3_yumnh"]
+[ext_resource type="Script" path="res://interface/bar/light_bar/light_bar.gd" id="5_oetes"]
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b7wuk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 0
+offset_right = 396.0
+offset_bottom = 97.0
+scale = Vector2(0.2, 0.2)
+
+[node name="HealthBar" parent="VBoxContainer" instance=ExtResource("1_rluvy")]
+layout_mode = 2
+script = ExtResource("3_yumnh")
+
+[node name="LightBar" parent="VBoxContainer" instance=ExtResource("2_q77sj")]
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 2
+script = ExtResource("5_oetes")
+
+[connection signal="health_changed" from="." to="VBoxContainer/HealthBar" method="_on_interface_health_changed"]
+[connection signal="initialise_health" from="." to="VBoxContainer/HealthBar" method="_on_interface_initialise_health"]
+[connection signal="initialise_light" from="." to="VBoxContainer/LightBar" method="_on_interface_initialise_light"]
+[connection signal="light_changed" from="." to="VBoxContainer/LightBar" method="_on_interface_light_changed"]
