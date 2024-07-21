@@ -4,15 +4,13 @@ extends CharacterBody2D
 @export var max_health: int = 300
 @export var max_health_potions: int = 2
 @export var max_light: float = 100
-@export var max_speed: float = 300.0
-@export var max_accelaration: float = 500.0
+@export var speed: float = 300.0
+@export var accelaration: float = 500.0
 @export var max_velocity: float = 100.0
 
 var health: int = max_health
 var health_potions: int = max_health_potions
 var light: float = max_light 
-var speed: float = 0
-var accelaration: float = 10
 var direction: Vector2 = Vector2.ZERO
 var hit_box: PackedScene = preload("res://shared_components/hit_box.tscn")
 
@@ -36,6 +34,10 @@ func _process(delta):
 		use_light(0.01)
 	if light == 0:
 		take_damage(1)
+	if health == 0:
+		pass
+		# death()
+		
 	move_and_slide()
 	
 func take_damage(damage: int):
@@ -57,3 +59,7 @@ func gain_light(light_gained: float):
 	light += light_gained
 	light = max(light, max_light)
 	emit_signal("light_changed", light)
+	
+func death():
+	velocity = Vector2.ZERO
+	animation_tree.set("parameters/conditions/is_dead", true)

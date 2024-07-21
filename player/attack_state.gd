@@ -1,7 +1,7 @@
 class_name AttackState
 extends State
 
-@export var dash_state: DashState
+@export var dodge_state: DodgeState
 @export var run_state: RunState
 @export var idle_state: IdleState
 

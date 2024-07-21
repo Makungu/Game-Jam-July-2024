@@ -1,7 +1,7 @@
 class_name IdleState
 extends State
 
-@export var dash_state: DashState
+@export var dodge_state: DodgeState
 @export var run_state: RunState
 @export var attack_state: AttackState
 
@@ -16,7 +16,7 @@ func state_process(delta):
 		
 func state_input(event: InputEvent):
 	if event.is_action_pressed("dash"):
-		next_state = dash_state
+		next_state = dodge_state
 	if event.is_action_pressed("melee_attack"):
 		next_state = attack_state
 		

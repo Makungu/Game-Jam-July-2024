@@ -1,4 +1,4 @@
-class_name DashState
+class_name DodgeState
 extends State
 
 @export var idle_state: IdleState
@@ -7,22 +7,22 @@ extends State
 
 
 func on_enter():
-	#player.animation_tree.set("parameters/conditions/is_moving", true)
-	#player.animation_tree.set("parameters/Run/blend_position", player.direction)
-	player.velocity += player.direction * player.max_accelaration * 50
+	player.animation_tree.set("parameters/conditions/is_dodging", true)
+	player.animation_tree.set("parameters/Run/blend_position", player.direction)
+	# 0.4 is arbitrary dampening of velocity to make the roll not go as far
+	player.velocity += player.direction * player.accelaration * 0.4
 	for child in player.get_children():
 		if child is HurtBox: 
 			child.process_mode = Node.PROCESS_MODE_DISABLED
-	#play dashing animation here and set player to invuln
-	#player.animation_tree.set("parameters/Run/blend_position", player.direction)
 
 
 func _on_animation_tree_animation_finished(anim_name):
-	if anim_name == "dodge_down" || anim_name == "dodge_up" || anim_name == "dodge_left_right":
+	if anim_name == "Roll_Down" || anim_name == "Roll_Up" || anim_name == "Roll_Side":
 		for child in player.get_children():
 			if child is HurtBox: 
 				child.process_mode = Node.PROCESS_MODE_INHERIT
-				
+		
+		player.velocity = Vector2.ZERO		
 		var direction = Input.get_vector("move_left","move_right","move_up","move_down")
 		if direction != Vector2.ZERO:
 			next_state = run_state
@@ -33,6 +33,5 @@ func _on_animation_tree_animation_finished(anim_name):
 			
 
 func on_exit():
-	pass
-	#player.animation_tree.set("parameters/conditions/is_moving", false)
+	player.animation_tree.set("parameters/conditions/is_dodging", false)
 
