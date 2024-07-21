@@ -1,9 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721590129
+::res://::1721581041
 README.md::TextFile::-1::1721573097::0::1::::<><>::
-::res://enemies/::1721581050
-::res://enemies/temp/::1721590035
-Tribe Warrior.png::CompressedTexture2D::5505424570940775544::1721590035::1721590129::1::::<><>::
+::res://enemies/::1721581041
 ::res://interface/::1721573097
 interface.gd::GDScript::-1::1721573097::0::1::::<>Control<>::
 interface.tscn::PackedScene::1824319649951460799::1721573097::0::1::::<><>::res://interface/interface.gd<>uid://ccxxdflgr2u32::::res://interface/bar/health_bar/health_bar.tscn<>uid://hcl3ca48gq7h::::res://interface/bar/light_bar/light_bar.tscn<>res://interface/bar/health_bar/health_bar.gd<>res://interface/bar/light_bar/light_bar.gd
@@ -27,10 +25,10 @@ clipart1529079.png::CompressedTexture2D::6920121877167681004::1721573097::172157
 health_potion_counter.tscn::PackedScene::4685770565593653929::1721573097::0::1::::<><>::uid://i50ngyfbt5e8::::res://interface/counter/counter.tscn
 ::res://interface/themes/::1721573097
 default_theme.tres::Theme::6122945046583821486::1721573097::0::1::::<><>::
-::res://player/::1721584494
+::res://player/::1721581025
 attack_state.gd::GDScript::-1::1721573097::0::1::::AttackState<>State<>::
 player.gd::GDScript::-1::1721573097::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::9107908993903454158::1721584494::0::1::::<><>::res://player/player.gd<>res://player/player_states/player_state_machine.gd<>uid://bmhftap4hallm::::res://player/sprites/temp/Stranded 04 - Hero sprite/04 Stranded - Pack 4.png<>res://player/player_states/idle_state.gd<>res://player/player_states/dashing_state.gd<>res://player/player_states/run_state.gd<>res://player/attack_state.gd<>uid://bt30v6ct1n4xx::::res://shared_components/hurt_box.tscn
+player.tscn::PackedScene::9107908993903454158::1721581025::0::1::::<><>::res://player/player.gd<>res://player/player_states/player_state_machine.gd<>uid://bmhftap4hallm::::res://player/sprites/temp/Stranded 04 - Hero sprite/04 Stranded - Pack 4.png<>res://player/player_states/idle_state.gd<>res://player/player_states/dashing_state.gd<>res://player/player_states/run_state.gd<>res://player/attack_state.gd<>uid://bt30v6ct1n4xx::::res://shared_components/hurt_box.tscn
 ::res://player/player_states/::1721573097
 dashing_state.gd::GDScript::-1::1721573097::0::1::::DashState<>State<>::
 idle_state.gd::GDScript::-1::1721573097::0::1::::IdleState<>State<>::
@@ -39,8 +37,63 @@ run_state.gd::GDScript::-1::1721573097::0::1::::RunState<>State<>::
 state.gd::GDScript::-1::1721573097::0::1::::State<>Node<>::
 ::res://player/sprites/::1721573097
 ::res://player/sprites/temp/::1721573097
-::res://player/sprites/temp/Stranded 04 - Hero sprite/::1721584489
+::res://player/sprites/temp/Stranded 04 - Hero sprite/::1721575862
 04 Stranded - Pack 4.png::CompressedTexture2D::3243474991174994430::1721576759::1721575862::1::::<><>::
+::res://player/sprites/temp/Stranded 04 - Hero sprite/Guns/::1721573689
+gun1.png::CompressedTexture2D::7212650308777915507::1721573097::1721573689::1::::<><>::
+gun2.png::CompressedTexture2D::6580338792967224184::1721573097::1721573689::1::::<><>::
+gun3.png::CompressedTexture2D::5618342397714183782::1721573097::1721573689::1::::<><>::
+gun4.png::CompressedTexture2D::1196193335432001551::1721573097::1721573689::1::::<><>::
+gun5.png::CompressedTexture2D::3675688114206410307::1721573097::1721573689::1::::<><>::
+gun6.png::CompressedTexture2D::4076266751725784703::1721573097::1721573689::1::::<><>::
+::res://player/sprites/temp/Stranded 04 - Hero sprite/With Sword/::1721573690
+04 Stranded - Pack 4 back up-Death.png::CompressedTexture2D::4509790423140706851::1721573097::1721573689::1::::<><>::
+Sci-fi hero 64x65.png::CompressedTexture2D::5573819505479203591::1721573097::1721573690::1::::<><>::
+::res://player/sprites/temp/Stranded 04 - Hero sprite/With Sword/Buffs/::1721573689
+04 Stranded - Pack 4 back up-Buff.png::CompressedTexture2D::1279320981642721960::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Defence.png::CompressedTexture2D::378411535069327441::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Flames.png::CompressedTexture2D::1423325842475044994::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Heal.png::CompressedTexture2D::4969768388439350425::1721573097::1721573689::1::::<><>::
+Buff sprites.png::CompressedTexture2D::168110479754485670::1721573097::1721573689::1::::<><>::
+::res://player/sprites/temp/Stranded 04 - Hero sprite/With Sword/Down/::1721573689
+04 Stranded - Pack 4 back up-Chop Down.png::CompressedTexture2D::880229995631235420::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Idle Down.png::CompressedTexture2D::7711936922666542060::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Move Down.png::CompressedTexture2D::9112026395066604130::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Roll Down.png::CompressedTexture2D::6691449697632911708::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Run Down.png::CompressedTexture2D::8592950896785260922::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Slash Down.png::CompressedTexture2D::9165713196489761710::1721573097::1721573689::1::::<><>::
+::res://player/sprites/temp/Stranded 04 - Hero sprite/With Sword/Right Left/::1721573689
+Idle left right.png::CompressedTexture2D::1922377696848611202::1721573097::1721573689::1::::<><>::
+R CHop.png::CompressedTexture2D::8689507151090255888::1721573097::1721573689::1::::<><>::
+R move.png::CompressedTexture2D::8007399331372346229::1721573097::1721573689::1::::<><>::
+R Roll.png::CompressedTexture2D::5652853182985796992::1721573097::1721573689::1::::<><>::
+R Run.png::CompressedTexture2D::5515887790739899956::1721573097::1721573689::1::::<><>::
+R Slash.png::CompressedTexture2D::5528476559467071113::1721573097::1721573689::1::::<><>::
+::res://player/sprites/temp/Stranded 04 - Hero sprite/With Sword/Up/::1721573689
+04 Stranded - Pack 4 back up-Chop Up.png::CompressedTexture2D::4462873598017292127::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Idle Up.png::CompressedTexture2D::3805614485094100416::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Move Up.png::CompressedTexture2D::5245150082245019418::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Roll Up.png::CompressedTexture2D::7435618508208196304::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Run UP.png::CompressedTexture2D::2352760416481547221::1721573097::1721573689::1::::<><>::
+attack slash up.png::CompressedTexture2D::4004966909702988481::1721573097::1721573689::1::::<><>::
+::res://player/sprites/temp/Stranded 04 - Hero sprite/Without Sword (for gun)/::1721573690
+04 Stranded - Pack 4 back up-Death.png::CompressedTexture2D::278276047513370504::1721573097::1721573689::1::::<><>::
+hero sprite not sword.png::CompressedTexture2D::5531244481828366790::1721573097::1721573690::1::::<><>::
+::res://player/sprites/temp/Stranded 04 - Hero sprite/Without Sword (for gun)/Down/::1721573689
+04 Stranded - Pack 4 back up-Idle Down.png::CompressedTexture2D::1046901695227333376::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Move Down.png::CompressedTexture2D::8067395753864277010::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Roll Down.png::CompressedTexture2D::8533578746304484437::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Run Down.png::CompressedTexture2D::5270945816875218854::1721573097::1721573689::1::::<><>::
+::res://player/sprites/temp/Stranded 04 - Hero sprite/Without Sword (for gun)/left right/::1721573689
+R move.png::CompressedTexture2D::2192719758201432365::1721573097::1721573689::1::::<><>::
+R Roll.png::CompressedTexture2D::287357783160860208::1721573097::1721573689::1::::<><>::
+R Run.png::CompressedTexture2D::923731986132261422::1721573097::1721573689::1::::<><>::
+R.png::CompressedTexture2D::4445407851165857153::1721573097::1721573689::1::::<><>::
+::res://player/sprites/temp/Stranded 04 - Hero sprite/Without Sword (for gun)/Up/::1721573689
+04 Stranded - Pack 4 back up-Idle Up.png::CompressedTexture2D::5395385082460924399::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Move Up.png::CompressedTexture2D::4090704214773065324::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Roll Up.png::CompressedTexture2D::4556133326345943815::1721573097::1721573689::1::::<><>::
+04 Stranded - Pack 4 back up-Run UP.png::CompressedTexture2D::1301870409114116525::1721573097::1721573689::1::::<><>::
 ::res://shared_components/::1721573097
 hit_box.gd::GDScript::-1::1721573097::0::1::::HitBox<>Area2D<>::
 hit_box.tscn::PackedScene::1024267968609568536::1721573097::0::1::::<><>::res://shared_components/hit_box.gd<>uid://bt30v6ct1n4xx::::res://shared_components/hurt_box.tscn

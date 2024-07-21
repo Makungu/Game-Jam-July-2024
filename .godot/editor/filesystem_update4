@@ -1,4 +1,12 @@
-res://enemies/temp/temp_enemy.tscn
-res://player/player.tscn
-res://player/attack_state.gd
 res://world/world.tscn
+res://player/player.tscn
+res://shared_components/hurt_box.gd
+res://player/player.gd
+res://player/player_states/dashing_state.gd
+res://player/attack_state.gd
+res://shared_components/hurt_box.tscn
+res://interface/bar/light_bar/light_bar.tscn
+res://interface/bar/health_bar/health_bar.tscn
+res://interface/interface.gd
+res://player/player_states/run_state.gd
+res://player/player_states/player_state_machine.gd
