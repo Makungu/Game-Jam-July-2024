@@ -10,7 +10,7 @@ var hit_box_instance: Node
 @onready var timer: Timer = $Timer
 
 func on_enter():
-	timer.wait_time = 0.8
+	timer.wait_time = 0.3
 	timer.start()
 	player.animation_tree.set("parameters/conditions/is_attacking", true)
 	player.animation_tree.set("parameters/Attack/blend_position", player.direction)
@@ -23,7 +23,7 @@ func state_input(event: InputEvent):
 		attack()
 
 func _on_animation_tree_animation_finished(anim_name):
-	if anim_name == "attack_down" || anim_name == "attack_up" || anim_name == "attack_left_right":
+	if anim_name == "Slash_Down" || anim_name == "Slash_Up" || anim_name == "Slash_Side":
 		if timer.is_stopped():
 			hit_box_instance.queue_free()
 			# check for inputs here, might need to transition to run or dash from this state
