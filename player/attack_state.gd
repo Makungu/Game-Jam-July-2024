@@ -17,6 +17,7 @@ func on_enter():
 	attack()
 	
 func state_input(event: InputEvent): 
+	# lock player out of next attack if first anim is not complete
 	if event.is_action_pressed("melee_attack"):
 		timer.start()
 		attack()

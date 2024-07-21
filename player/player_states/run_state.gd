@@ -17,7 +17,8 @@ func state_process(delta):
 		next_state = idle_state
 	else:
 		player.animation_tree.set("parameters/Run/blend_position", player.direction)
-		player.velocity += player.direction * player.max_accelaration * delta 
+		player.accelaration *= delta
+		player.velocity += player.direction * min(player.accelaration, player.max_accelaration)	
 		player.velocity.limit_length(player.max_speed)
 		if player.direction.x < 0:
 			player.sprite.flip_h = true
