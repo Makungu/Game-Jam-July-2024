@@ -1,2 +1,4 @@
-res://world/world.tscn
+res://enemies/temp/temp_enemy.tscn
 res://player/player.tscn
+res://player/attack_state.gd
+res://world/world.tscn
