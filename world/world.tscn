@@ -31,10 +31,11 @@ anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="HitBox" parent="." instance=ExtResource("3_u6jfl")]
+[node name="HitBox" parent="." groups=["enemy"] instance=ExtResource("3_u6jfl")]
 position = Vector2(138, -44)
 damage = 100
 
 [connection signal="health_changed" from="Player" to="CanvasLayer/Interface" method="_on_player_health_changed"]
 [connection signal="initialise_health" from="Player" to="CanvasLayer/Interface" method="_on_player_initialise_health"]
 [connection signal="initialise_light" from="Player" to="CanvasLayer/Interface" method="_on_player_initialise_light"]
+[connection signal="light_changed" from="Player" to="CanvasLayer/Interface" method="_on_player_light_changed"]
