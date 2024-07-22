@@ -28,6 +28,7 @@ func attack():
 		position.y += 10 if enemy.direction.y > 0 else -10 
 	hit_box_instance.position = position
 	hit_box_instance.damage = 50
+	hit_box_instance.target_group = "player"
 	add_child(hit_box_instance)
 	
 func on_exit():

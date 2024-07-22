@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://oufsqvluubpw"]
+[gd_scene load_steps=2 format=3 uid="uid://oufsqvluubpw"]
 
-[ext_resource type="PackedScene" uid="uid://bt30v6ct1n4xx" path="res://shared/hurt_box.tscn" id="1_edr3e"]
 [ext_resource type="Script" path="res://shared/hit_box.gd" id="2_tj601"]
 
-[node name="HitBox" instance=ExtResource("1_edr3e")]
+[node name="HitBox"]
 script = ExtResource("2_tj601")
 damage = 0
+target_group = ""
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

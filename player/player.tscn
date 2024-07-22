@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://player/player_states/dodge_state.gd" id="3_wodfi"]
 [ext_resource type="Script" path="res://player/player_states/run_state.gd" id="5_fv13y"]
 [ext_resource type="Script" path="res://player/player_states/attack_state.gd" id="12_hbcyp"]
-[ext_resource type="PackedScene" uid="uid://bt30v6ct1n4xx" path="res://shared/hurt_box.tscn" id="13_4386h"]
 
 [sub_resource type="Animation" id="Animation_i5mhr"]
 resource_name = "Death"
@@ -453,6 +452,8 @@ states/Start/position = Vector2(197, 94)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_lr67l"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_vay30"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_swsrf"), "Attack", "Roll", SubResource("AnimationNodeStateMachineTransition_nf7ru"), "Run", "Roll", SubResource("AnimationNodeStateMachineTransition_07voj"), "Attack", "Death", SubResource("AnimationNodeStateMachineTransition_64swi"), "Roll", "Death", SubResource("AnimationNodeStateMachineTransition_0qbfq"), "Idle", "Death", SubResource("AnimationNodeStateMachineTransition_u7mju"), "Run", "Death", SubResource("AnimationNodeStateMachineTransition_0jmb3"), "Idle", "Roll", SubResource("AnimationNodeStateMachineTransition_2jhso"), "Roll", "Idle", SubResource("AnimationNodeStateMachineTransition_i5b5x"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_tmlbj"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_23f4d"), "Roll", "Run", SubResource("AnimationNodeStateMachineTransition_pkaws"), "Attack", "Run", SubResource("AnimationNodeStateMachineTransition_plbnw"), "Run", "Attack", SubResource("AnimationNodeStateMachineTransition_r1oiv"), "Roll", "Attack", SubResource("AnimationNodeStateMachineTransition_84chy")]
 graph_offset = Vector2(124.014, 108.406)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vo0hw"]
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_hdnha")
 
@@ -513,7 +514,9 @@ idle_state = NodePath("../Idle")
 [node name="Timer" type="Timer" parent="PlayerStateMachine/Attack"]
 one_shot = true
 
-[node name="HurtBox" parent="." groups=["player"] instance=ExtResource("13_4386h")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vo0hw")
+debug_color = Color(2.79158e-06, 0.583701, 0.785336, 0.42)
 
 [connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/Dodge" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/Attack" method="_on_animation_tree_animation_finished"]

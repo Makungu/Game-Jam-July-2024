@@ -23,8 +23,7 @@ func _process(delta):
 		sprite.flip_h = false
 		
 	if health == 0:
-		pass
-		# death()
+		death()
 		
 	move_and_slide()
 	
