@@ -341,7 +341,9 @@ states/Start/position = Vector2(110, 135)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_5hx1k"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_mbgl0"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_cuddt"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_l2ooh"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_ggwek"), "Attack", "Run", SubResource("AnimationNodeStateMachineTransition_ail2p"), "Run", "Attack", SubResource("AnimationNodeStateMachineTransition_evch8"), "Idle", "Death", SubResource("AnimationNodeStateMachineTransition_w1jq0"), "Run", "Death", SubResource("AnimationNodeStateMachineTransition_251ff"), "Attack", "Death", SubResource("AnimationNodeStateMachineTransition_c2uno")]
 graph_offset = Vector2(91.0924, 101.934)
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_4sq5d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

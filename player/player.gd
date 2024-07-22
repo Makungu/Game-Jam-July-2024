@@ -18,10 +18,8 @@ var hit_box: PackedScene = preload("res://shared/hit_box.tscn")
 @onready var sprite: Sprite2D = $Sprite2D
 
 signal health_changed(health)
-signal health_depleted(health)
 signal initialise_health(max_health)
 signal light_changed(light)
-signal light_depleted(light)
 signal initialise_light(max_light)
 
 func _ready():
@@ -35,8 +33,7 @@ func _process(delta):
 	if light == 0:
 		take_damage(1)
 	if health == 0:
-		pass
-		# death()
+		death()
 		
 	move_and_slide()
 	
