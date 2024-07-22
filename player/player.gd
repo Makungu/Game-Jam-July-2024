@@ -12,7 +12,7 @@ var health: int = max_health
 var health_potions: int = max_health_potions
 var light: float = max_light 
 var direction: Vector2 = Vector2.ZERO
-var hit_box: PackedScene = preload("res://shared_components/hit_box.tscn")
+var hit_box: PackedScene = preload("res://shared/hit_box.tscn")
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var sprite: Sprite2D = $Sprite2D
