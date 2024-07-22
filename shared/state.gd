@@ -2,6 +2,7 @@ class_name State
 extends Node
 
 var player: Player
+var enemy: Enemy
 var next_state: State
 
 # Any setup that should be done when entering the current state should be done here .

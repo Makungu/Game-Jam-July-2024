@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cko4skks3cpqm"
-path="res://.godot/imported/Tribe Warrior.png-b04334fc126241fe89b599f4f2e78e32.ctex"
+path="res://.godot/imported/Tribe Warrior.png-9671e89a06c0ac4a5da56c82a1d5e861.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/temp/Tribe Warrior.png"
-dest_files=["res://.godot/imported/Tribe Warrior.png-b04334fc126241fe89b599f4f2e78e32.ctex"]
+source_file="res://enemies/sprites/temp/Tribe Warrior.png"
+dest_files=["res://.godot/imported/Tribe Warrior.png-9671e89a06c0ac4a5da56c82a1d5e861.ctex"]
 
 [params]
 

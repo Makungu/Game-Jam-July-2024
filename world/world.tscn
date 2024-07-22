@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd55m0tudpbqn"]
+[gd_scene load_steps=5 format=3 uid="uid://bd55m0tudpbqn"]
 
 [ext_resource type="PackedScene" uid="uid://d2066vuknun4q" path="res://player/player.tscn" id="1_ym1eb"]
 [ext_resource type="PackedScene" uid="uid://08yjpqmysklr" path="res://interface/interface.tscn" id="2_mkgio"]
-[ext_resource type="PackedScene" uid="uid://oufsqvluubpw" path="res://shared_components/hit_box.tscn" id="3_u6jfl"]
+[ext_resource type="PackedScene" uid="uid://oufsqvluubpw" path="res://shared/hit_box.tscn" id="3_u6jfl"]
+[ext_resource type="PackedScene" uid="uid://00hdesjhyibe" path="res://enemies/enemy.tscn" id="4_om05g"]
 
 [node name="World" type="Node2D"]
 
@@ -30,6 +31,9 @@ damage = 100
 
 [node name="HitBox" parent="." groups=["terrain"] instance=ExtResource("3_u6jfl")]
 position = Vector2(221, 3)
+
+[node name="Enemy" parent="." instance=ExtResource("4_om05g")]
+position = Vector2(165, 51)
 
 [connection signal="health_changed" from="Player" to="CanvasLayer/Interface" method="_on_player_health_changed"]
 [connection signal="initialise_health" from="Player" to="CanvasLayer/Interface" method="_on_player_initialise_health"]
